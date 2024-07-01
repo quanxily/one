@@ -54,21 +54,7 @@ html = """
                 float: right;
                 display: block;
             }
-
-            .grid-container {
-            grid-template-areas: 
-              'header'
-              'nav'
-              'left'
-              'middle'
-              'right'
-              'footer';
           }
-
-          .left, .middle, .right {
-            grid-area: unset;
-          }
-        }
 
         @media (max-width: 600px) {
             .nav-right.responsive {
@@ -84,6 +70,19 @@ html = """
                 display: block;
                 text-align: right;
             }
+            .grid-container {
+            grid-template-areas: 
+              'header'
+              'nav'
+              'left'
+              'middle'
+              'right'
+              'footer';
+          }
+
+          .left, .middle, .right {
+            grid-area: unset;
+          }
         }
 
         /* Slideshow container */
@@ -541,5 +540,5 @@ def photo3():
     return render_template("photo3.html")
 
 
-if __name__ == "__main__":
-  app.run()
+#if __name__ == "__main__":
+#  app.run()
