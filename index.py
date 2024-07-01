@@ -77,16 +77,7 @@ html = """
                 -webkit-flex-direction: column;
          }
         }
-                
-
-         @media (max-width: 400px) {
-         .grid-container{
-                flex-direction: column;
-                -webkit-flex-direction: column;
-         }
-        }
-
-         @media screen and (max-width: 768px) {
+          @media screen and (max-width: 768px) {
           .grid-container {
             grid-template-areas: 
               'nav'
