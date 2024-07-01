@@ -9,7 +9,7 @@ html = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我和翔順寶寶的紀念網站</title>
+    <title>小櫻喜個人網站</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style type="text/css">
         nav {
@@ -54,7 +54,7 @@ html = """
                 float: right;
                 display: block;
             }
-          }
+        }
 
         @media (max-width: 600px) {
             .nav-right.responsive {
@@ -71,34 +71,19 @@ html = """
                 text-align: right;
             }
         }
-
-         @media (max-width: 600px) {
-         .grid-container{
-                flex-direction: column;
-                -webkit-flex-direction: column;
-         }
-        }
-                
-
-         @media (max-width: 400px) {
-         .grid-container{
-                flex-direction: column;
-                -webkit-flex-direction: column;
-         }
-        }
-
-         @media screen and (max-width: 480px) {
+              
+        @media screen and (max-width: 480px) {
           .grid-container {
             grid-template-areas: 
               'header'
               'nav'
               'left'
               'middle'
-              'right'
+              'right' /* Changed the order to ensure "right" comes before "footer" */
               'footer';
           }
 
-          .left, .middle, .right {
+            .left, .middle, .right {
             grid-area: unset;
           }
         }
@@ -213,31 +198,7 @@ html = """
             color: pink;
         }
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: stretch;
-        }
-
-        .colum {
-            padding: 10px;
-        }
-
-        .colum.side {
-            flex: 1;
-            padding: 10px;
-            margin-bottom: 10px;
-            overflow: hidden;
-        }
-
-        .colum.middle {
-            flex: 1;
-            padding: 10px;
-            margin-bottom: 10px;
-            overflow: hidden;
-        }
-
-            .grid-container {
+         .grid-container {
             display: grid;
             grid-template-areas: 
             'nav nav nav nav nav nav'
