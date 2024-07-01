@@ -86,7 +86,7 @@ html = """
          }
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 480px) {
           .grid-container {
             grid-template-areas: 
               'header'
@@ -102,20 +102,6 @@ html = """
           }
         }
 
-        /* Responsive layout for even smaller screens */
-        @media screen and (max-width: 480px) {
-          .grid-container {
-            grid-template-areas: 
-              'header'
-              'nav'
-              'middle'
-              'right' /* Changed the order to ensure "right" comes before "footer" */
-              'footer';
-          }
-
-          .left, .middle, .right {
-            margin: 0;
-          }
 
         /* Slideshow container */
         .slideshow-container {
