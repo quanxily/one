@@ -140,22 +140,6 @@
 		 	background-color: #faabaa;
 		 }
 
-		   @media screen and (max-width: 768px) {
-		  .grid-container {
-		    grid-template-areas: 
-		      'header'
-		      'nav'
-		      'left'
-		      'middle'
-		      'right'
-		      'footer';
-		  }
-
-		  .left, .middle, .right {
-		    grid-area: unset;
-		  }
-		}
-
 		/* Responsive layout for even smaller screens */
 		@media screen and (max-width: 480px) {
 		  .grid-container {
@@ -167,12 +151,8 @@
 		      'footer';
 		  }
 
-		  .left, .middle, .right {
-		    margin: 0;
-		  }
-
-		  .left, .right {
-		    display: none; /* Hiding the left and right sections on smaller screens */
+		  	.left, .middle, .right {
+		    grid-area: unset;
 		  }
 		}
 

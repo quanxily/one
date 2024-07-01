@@ -72,6 +72,38 @@ html = """
             }
         }
 
+         @media (max-width: 600px) {
+         .grid-container{
+                flex-direction: column;
+                -webkit-flex-direction: column;
+         }
+        }
+                
+
+         @media (max-width: 400px) {
+         .grid-container{
+                flex-direction: column;
+                -webkit-flex-direction: column;
+         }
+        }
+
+         @media screen and (max-width: 480px) {
+          .grid-container {
+            grid-template-areas: 
+              'header'
+              'nav'
+              'left'
+              'middle'
+              'right'
+              'footer';
+          }
+
+          .left, .middle, .right {
+            grid-area: unset;
+          }
+        }
+
+
         /* Slideshow container */
         .slideshow-container {
             position: relative;
@@ -164,6 +196,7 @@ html = """
         }
 
         footer {
+            grid-area: footer;
             padding: 5px;
             text-align: center;
             background-color:beige;
@@ -278,7 +311,8 @@ html = """
                 content.style.display = 'none';
                 button.innerText = '繼續閱讀';
             }
-        }    </script>
+        }    
+    </script>
 </head>
 
 <body>
