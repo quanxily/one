@@ -44,9 +44,7 @@
 			grid-template-areas: 
 			'header header header header header header'
 			'nav nav nav nav nav nav'
-			'left left '
-			'middle middle '
-			'right right'
+			'left left middle middle right right'
 			'footer footer footer footer footer footer';
 			grid-gap: 5px 5px;
 
@@ -142,22 +140,36 @@
 		 	background-color: #faabaa;
 		 }
 
-		/* Responsive layout for even smaller screens */
-		@media screen and (max-width: 480px) {
+		   @media screen and (max-width: 768px) {
 		  .grid-container {
 		    grid-template-areas: 
 		      'header'
 		      'nav'
 		      'left'
 		      'middle'
+		      'right'
+		      'footer';
+		  }
+
+		  .left, .middle, .right {
+		    grid-area: unset;
+		  }
+		}
+
+		/* Responsive layout for even smaller screens */
+		@media screen and (max-width: 480px) {
+		  .grid-container {
+		    grid-template-areas: 
+		      'header'
+		      'nav'
+		      'middle'
 		      'right' /* Changed the order to ensure "right" comes before "footer" */
 		      'footer';
 		  }
 
-		  	.left, .middle, .right {
-		    grid-area: unset;
+		  .left, .middle, .right {
+		    margin: 0;
 		  }
-		}
 		 #myTop {
             display: none; /* Hidden by default */
             position: fixed; /* Fixed position */
