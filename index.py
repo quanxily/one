@@ -87,21 +87,22 @@ html = """
         }
 
         @media screen and (max-width: 480px) {
-          .grid-container {
-            grid-template-areas: 
-              'header'
-              'nav'
-              'left'
-              'middle'
-              'right'
-              'footer';
-          }
+            .grid-container {
+                grid-template-areas: 
+                    'header'
+                    'nav'
+                    'left'
+                    'middle'
+                    'right'
+                    'footer';
+                grid-template-columns: 1fr; /* Ensure full-width columns */
+            }
 
-          .left, .middle, .right {
-            grid-area: unset;
-          }
+            .left, .middle, .right {
+                grid-area: unset;
+                width: 100%; /* Ensure full-width sections */
+            }
         }
-
 
         /* Slideshow container */
         .slideshow-container {
