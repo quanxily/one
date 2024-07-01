@@ -70,19 +70,6 @@ html = """
                 display: block;
                 text-align: right;
             }
-            .grid-container {
-            grid-template-areas: 
-              'header'
-              'nav'
-              'left'
-              'middle'
-              'right'
-              'footer';
-          }
-
-          .left, .middle, .right {
-            grid-area: unset;
-          }
         }
 
         /* Slideshow container */
