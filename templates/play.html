@@ -44,7 +44,9 @@
 			grid-template-areas: 
 			'header header header header header header'
 			'nav nav nav nav nav nav'
-			'left left middle middle right right'
+			'left left '
+			'middle middle '
+			'right right'
 			'footer footer footer footer footer footer';
 			grid-gap: 5px 5px;
 
@@ -142,22 +144,24 @@
 
 		/* Responsive layout for even smaller screens */
 		@media screen and (max-width: 480px) {
-	    .grid-container {
-	        display: grid; /* 使用grid佈局 */
-	        grid-template-areas: 
-	            'header'
-	            'nav'
-	            'middle'
-	            'right' /* 將 "right" 放在 "footer" 之前 */
-	            'footer';
-	        grid-template-columns: 1fr; /* 單一列，以便於小螢幕上堆疊 */
-	    }
+		    .grid-container {
+		        display: grid; /* 使用grid佈局 */
+		        grid-template-areas: 
+		            'header'
+		            'nav'
+		            'left'
+		            'middle'
+		            'right'
+		            'footer';
+		        grid-template-columns: 1fr; /* 單一列，以便於小螢幕上堆疊 */
+		        grid-gap: 5px; /* 設定元素間的間距 */
+		    }
 
-	    .left, .middle, .right {
-	        grid-area: unset; /* 重設各區塊的grid區域設定 */
-	        width: 100%; /* 確保區塊在小螢幕上滿寬度顯示 */
-	    }
-	}
+		    .left, .middle, .right {
+		        grid-area: unset; /* 重設各區塊的grid區域設定 */
+		        width: 100%; /* 確保區塊在小螢幕上滿寬度顯示 */
+		    }
+		}
 		 #myTop {
             display: none; /* Hidden by default */
             position: fixed; /* Fixed position */
