@@ -432,12 +432,12 @@ html = """
         <hr>
 
         <aside class="left">
-                    <div>
+
                         <h3><i class="fa-solid fa-paw"></i>關於我</h3>
                         <p>我是一個</p>
-                    </div>
 
-                    <div>
+
+                 
                         <h3><i class="fa-solid fa-paw"></i>工作經驗</h3>
                         <p>
                             我的工作有跨不同的行業,便利商店,腳踏車零件工廠,彩券行,會做那麼多是因為想要多存錢靠自己不讓父母擔心,且做的性質不同,我的第一份是暑期工讀,後面兩份都是做長期的工讀,
@@ -449,9 +449,9 @@ html = """
                                 <a href="/" ><i class="fa-solid fa-briefcase"></i>工作經驗</a>
                             </p>
                         </div>
-                    </div>
+                    
 
-                    <div>
+                    
                         <h3><i class="fa-solid fa-paw"></i>學校生活</h3>
                         <p>
                             我在學校人脈不多,沒有什麼朋友,也沒有去參加社團,就是上學上課而已,直到一件事情的發生改變了我的生活和思維
@@ -463,9 +463,9 @@ html = """
                                 <a href="/" ><i class="fa-solid fa-briefcase"></i>學校生活</a>
                             </p>
                         </div>
-                    </div>
+                
 
-                    <div>
+                   
                         <h3><i class="fa-solid fa-paw"></i>興趣愛好</h3>
                         <p>
                             我在學校人脈不多,沒有什麼朋友,也沒有去參加社團,就是上學上課而已,但是我會利用空檔時間去做我喜歡做的事情或者是能夠讓我有趕到成就感的事情
@@ -477,9 +477,9 @@ html = """
                                 <a href="/" ><i class="fa-solid fa-briefcase"></i>興趣愛好</a>
                             </p>
                         </div>
-                    </div>
+                  
 
-                    <div>
+                   
                         <h3><i class="fa-solid fa-paw"></i>證照與作品</h3>
                         <p>
                             我在學校人脈不多,沒有什麼朋友,也沒有去參加社團,就是上學上課而已,等到升大二下才知道原來證照的作用也考到了第一張技術證照
@@ -491,7 +491,7 @@ html = """
                                 <a href="/" ><i class="fa-solid fa-briefcase"></i>證照與作品</a>
                             </p>
                         </div>
-                    </div>
+                    
          </aside>
 
         <section class="middle">
@@ -511,24 +511,24 @@ html = """
         </section>
 
         <aside class="right">
-            <div>
+           
                 <h3><i class="fa-solid fa-film"></i>現今目標</h3>
                     <p class="highlight"><i class="fa-regular fa-money-bill-1"></i>存款至少3萬</p>
                     <p class="highlight">考到ERP　Ｃ級證照一張</p>
                     <p class="highlight">做出專屬於自己的網站</p>
-            </div>
-           <div>
+          
+           
                 <h3><i class="fa-solid fa-film"></i>五年後目標</h3>
                 <p class="highlight"><i class="fa-regular fa-money-bill-1"></i>存款至少２０萬</p>
                 <p class="highlight">有足夠的錢與愛人一起出國旅遊</p>
                 <p class="highlight">改換跑道做業務行工作</p>
-           </div>
-           <div>
+           
+           
              <h3><i class="fa-solid fa-film"></i>十年後目標</h3>
              <p class="highlight">讓身邊的人都接觸賀寶芙</p>
             　<p class="highlight">讓自己的身體維持健康</p>
             　<p class="highlight">與自己的愛人規劃長久的旅行</p>
-           </div>
+          
 
         </aside>
     </main>
@@ -562,4 +562,4 @@ def photo3():
 
 
 #if __name__ == "__main__":
-#  app.run()
+# app.run()
