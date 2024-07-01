@@ -86,22 +86,40 @@ html = """
          }
         }
 
-        @media screen and (max-width: 480px) {
-            .grid-container {
-                grid-template-areas: 
-                    'header'
-                    'nav'
-                    'left'
-                    'middle'
-                    'right'
-                    'footer';
-                grid-template-columns: 1fr; /* Ensure full-width columns */
-            }
+         @media screen and (max-width: 768px) {
+          .grid-container {
+            grid-template-areas: 
+              'header'
+              'nav'
+              'left'
+              'middle'
+              'right'
+              'footer';
+          }
 
-            .left, .middle, .right {
-                grid-area: unset;
-                width: 100%; /* Ensure full-width sections */
-            }
+          .left, .middle, .right {
+            grid-area: unset;
+          }
+        }
+
+        /* Responsive layout for even smaller screens */
+        @media screen and (max-width: 480px) {
+          .grid-container {
+            grid-template-areas: 
+              'header'
+              'nav'
+              'middle'
+              'right' /* Changed the order to ensure "right" comes before "footer" */
+              'footer';
+          }
+
+          .left, .middle, .right {
+            margin: 0;
+          }
+
+          .left {
+            display: none; /* Hiding the left and right sections on smaller screens */
+          }
         }
 
         /* Slideshow container */
