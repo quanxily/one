@@ -48,7 +48,7 @@
 			'middle middle '
 			'right right'
 			'footer footer footer footer footer footer';
-			grid-gap: 5px 5px;
+			grid-gap: 4px 4px;
 
 		}
 
@@ -148,13 +148,17 @@
 		    grid-template-areas: 
 		      'header'
 		      'nav'
+		      'left'
 		      'middle'
 		      'right' /* Changed the order to ensure "right" comes before "footer" */
 		      'footer';
 		  }
 
 		  	.left, .middle, .right {
-		    grid-area: unset;
+		    grid-area: 
+		    'left'
+		    'middle'
+		    'right' ;
 		  }
 		}
 		 #myTop {
