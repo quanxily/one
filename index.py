@@ -117,10 +117,6 @@ html = """
             margin: 0;
           }
 
-          .left, .right {
-            display: none; /* Hiding the left and right sections on smaller screens */
-          }
-        }
         /* Slideshow container */
         .slideshow-container {
             position: relative;
