@@ -71,24 +71,56 @@ html = """
                 text-align: right;
             }
         }
-              
-        @media screen and (max-width: 480px) {
+         @media (max-width: 600px) {
+         .grid-container{
+                flex-direction: column;
+                -webkit-flex-direction: column;
+         }
+        }
+                
+
+         @media (max-width: 400px) {
+         .grid-container{
+                flex-direction: column;
+                -webkit-flex-direction: column;
+         }
+        }
+
+        @media screen and (max-width: 768px) {
           .grid-container {
             grid-template-areas: 
               'header'
               'nav'
               'left'
               'middle'
-              'right' /* Changed the order to ensure "right" comes before "footer" */
+              'right'
               'footer';
           }
 
-            .left, .middle, .right {
+          .left, .middle, .right {
             grid-area: unset;
           }
         }
 
+        /* Responsive layout for even smaller screens */
+        @media screen and (max-width: 480px) {
+          .grid-container {
+            grid-template-areas: 
+              'header'
+              'nav'
+              'middle'
+              'right' /* Changed the order to ensure "right" comes before "footer" */
+              'footer';
+          }
 
+          .left, .middle, .right {
+            margin: 0;
+          }
+
+          .left, .right {
+            display: none; /* Hiding the left and right sections on smaller screens */
+          }
+        }
         /* Slideshow container */
         .slideshow-container {
             position: relative;
