@@ -89,8 +89,8 @@ html = """
          @media screen and (max-width: 768px) {
           .grid-container {
             grid-template-areas: 
-              'header'
               'nav'
+              'header'
               'left'
               'middle'
               'right'
@@ -106,8 +106,8 @@ html = """
         @media screen and (max-width: 480px) {
           .grid-container {
             grid-template-areas: 
-              'header'
               'nav'
+              'header'
               'middle'
               'right' /* Changed the order to ensure "right" comes before "footer" */
               'footer';
@@ -492,16 +492,16 @@ html = """
             <h2>姓名：楊荃喜</h2>
             <h2>學校：靜宜大學</h2>
             <h2>星座：水瓶座</h2>
-            <h2>興趣：</h2>
+            <h2>興趣：看電影,旅遊,看小說,追劇聽歌,運動,健身,手做</h2>
             <h2>專長：做網頁</h2>
             <h2>科系：資管系</h2>
-            <h2>當初選擇本科系的原因：</h2>
+            <h2>當初選擇本科系的原因：想說名額僅此兩名應該不會選到我就直接填第一個了,但是卻也有意外收穫呢!學到了不少東西</h2>
             <h2>作品：此網站是一個還有另外兩個網站</h2>
             <h2>證照：ERP軟體規畫師</h2>
-            <h2>考取證照的原因：</h2>
+            <h2>考取證照的原因：覺得對渥來如果有興趣想要進入有關於ERP職場會有所加分</h2>
             <h2>有成就感的事情：看著自己做的網頁一步步變得越來越好看</h2>
-            <h2>做網頁遇到的挫折：</h2>
-            <h2>解決問題的方式：</h2>
+            <h2>做網頁遇到的挫折：傳不上去,格式排版問題</h2>
+            <h2>解決問題的方式：去查網路才知道有更新,去修改成ˊ雲本的就可以了,先透過書本去找問題,如果找不出來就去Chapgpt尋求解答</h2>
         </section>
 
         <aside class="right">
