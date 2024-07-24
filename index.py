@@ -337,10 +337,10 @@ html = """
     <nav id="myTopnav" class="topnav">
         <div class="nav-left"><i class="fa-solid fa-person-dress"></i>小櫻喜個人網站</div>
         <div class="nav-right" id="nav-right">
-            <a href="/" class="active"><i class="fa-solid fa-briefcase"></i>工作經驗</a>
-            <a href="/photo2"><i class="fa-solid fa-school"></i>學校生活</a>
-            <a href="/photo3"><i class="fa-brands fa-gratipay"></i>興趣愛好</a>
-            <a href="/play"><i class="fa-solid fa-address-book"></i>作品與證照</a>
+            <a href="/job" class="active"><i class="fa-solid fa-briefcase"></i>工作經驗</a>
+            <a href="/live"><i class="fa-solid fa-school"></i>學校生活</a>
+            <a href="/love"><i class="fa-brands fa-gratipay"></i>興趣愛好</a>
+            <a href="/only"><i class="fa-solid fa-address-book"></i>作品與證照</a>
             <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
         </div>
     </nav>
@@ -426,7 +426,11 @@ html = """
         <aside class="left">
 
                         <h3><i class="fa-solid fa-paw"></i>關於我</h3>
-                        <p>我是一個</p>
+                        <p>
+                            我是一個蠻隨和的人,當我做了決定就不會後悔,即使後悔了也會另外找出路不會再回去,工作便是如此,離職我便也不會再回去做了,除非這間的待遇真的不錯他們有在應徵短期的我就會在應徵,對於學業我會盡力做到最好,且都會讓自己過不被當,讓父母知道我即使在打工也不會荒廢學業,再加上挺堅強的個性有時候真的很累不會跟父母說
+                            就是自己在一個屬於自己的空間裡流淚來發洩心中的壓力,有再多的煩惱不會表現出來給父母看,且我學習也會自律,該讀書我就讀書,該完該放鬆我也會給自己放鬆玩的時間,但有時候壓力太大又沒有發洩又會讓自己生病,之前有一次我壓力太大哭到後面直接發燒感冒,幸好男友媽媽帶我去看醫生,我有壓力煩惱不跟父母說是不想要讓他們擔心
+                            但還是想要找人說說,所以我的男友很有包容心當我的垃圾桶,每次跟他說完心裡都好多了,壓力煩惱便有隨之飄散去了,他的樂觀開朗與我的焦慮個性互補
+                        </p>
 
 
                  
@@ -539,18 +543,26 @@ def index():
     return x
 
 
-@app.route("/photo2")
-def photo2():
-    return render_template("photo2.html")
+@app.route("/live")
+def live():
+    return render_template("live.html")
 
 @app.route("/play")
 def play():
     return render_template("play.html")
 
 
-@app.route("/photo3")
-def photo3():
-    return render_template("photo3.html")
+@app.route("/love")
+def love():
+    return render_template("love.html")
+
+@app.route("/job")
+def job():
+    return render_template("job.html")
+
+@app.route("/only")
+def only():
+    return render_template("only.html")
 
 
 #if __name__ == "__main__":

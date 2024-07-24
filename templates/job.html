@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我和翔順寶寶的紀念網站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style type="text/css">
+        nav {
+            background-color: beige;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+
+        .nav-left {
+            font-size: 17px;
+            color: black;
+            text-decoration: underline pink 20%;
+        }
+
+        .nav-right {
+            display: flex;
+        }
+
+        nav a.active {
+            background-color: beige;
+            color: black;
+        }
+        
+        .nav-right a {
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-size: 17px;
+            text-shadow: 2px 2px pink;
+        }
+
+        @media (max-width: 800px) {
+            .nav-right a:not(:first-child) {
+                display: none;
+            }
+            .nav-right a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-right.responsive {
+                position: relative;
+            }
+            .nav-right.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .nav-right.responsive a {
+                float: none;
+                display: block;
+                text-align: right;
+            }
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .mySlideshows {
+            display: none;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+
+        .text {
+            color: pink;
+            font-size: 35px;
+            padding: 50px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+       #myTop {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: pink; /* Set a background color */
+            color: black; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 25px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+
+        #myTop:hover {
+            background-color: beige; /* Add a dark-grey background on hover */
+        }
+
+        footer {
+            padding: 5px;
+            text-align: center;
+            background-color:beige;
+        }
+
+        footer a{
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        footer a:hover {
+            color: pink;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .colum {
+            padding: 10px;
+            background-color: pink;
+        }
+
+        .colum.side {
+            flex: 1;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .colum.middle {
+            flex: 1;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myTop" title="Go to top">Top</button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("myTop");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+     <nav id="myTopnav" class="topnav">
+        <div class="nav-left">T AND Q LOVE</div>
+        <div class="nav-right" id="nav-right">
+            <a href="/job" class="active"><i class="fa-solid fa-briefcase"></i>工作經驗</a>
+            <a href="/live"><i class="fa-solid fa-school"></i>學校生活</a>
+            <a href="/love"><i class="fa-brands fa-gratipay"></i>興趣愛好</a>
+            <a href="/only"><i class="fa-solid fa-address-book"></i>作品與證照</a>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
+        </div>
+    </nav>
+
+       <header class="slideshow-container">
+        <div class="mySlideshows fade">
+            <img src="static/sr.jpg" style="width: 100%; height: 400px;" >
+            <div class="text">速連 -1</div>
+        </div>
+
+        <div class="mySlideshows fade">
+            <img src="static/old.jpg" style="width: 100%; height: 400px;" >
+            <div class="text">公益彩券行 - 2</div>
+        </div>
+
+        <div class="mySlideshows fade">
+            <img src="static/7-11.jpg" style="width: 100%; height: 400px;" >
+            <div class="text">7-11店員 - 3</div>
+        </div>
+
+        <div class="mySlideshows fade">
+            <img src="static/eat.jpg" style="width: 100%; height: 400px;" >
+            <div class="text">實心蛋捲 - 4</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+
+        </div>
+    </header>
+
+     <script>
+        function navFunction() {
+            var x = document.getElementById("nav-right");
+            if (x.className === "nav-right") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-right";
+            }
+        }
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlideshows");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+    <main>
+        <article>
+         <section class="row">
+            <div class ="colum side">
+                <h3>打工年齡</h3>
+                <p>剛滿18且高中畢業了</p>
+                <img src = "static/lv.jpg" width ="300" height="350">
+            </div>
+                
+            <div class ="colum middle">
+                <h3>速連打工內容</h3>
+                <p style="color:#f2a30f">腳踏車裡面有很多小零件,把小零件分成很多部分,交由不同生產線組裝,而我被分到組裝零件生產線的部分,在進入滿一個月的這段時間,我都被組長調去不同生產線做,而速度當時也做得越來越快,到後面就固定在一條生產線做,大部分都是來得及做不會造成塞車,但當只有兩個人的時候真的會塞車,零件也都是放在倉庫裡面,而我一開始去拿需要小本本去找,到後面熟了就知道放在哪裡了也不需要小本本了,除非的是不常做久久來一次,這間公司福利和衛生環境都不錯,都有請打掃阿姨來整理環境,且便當也是非常的豐富,當時想說藉由暑假三個月的打工存大學的生活費,而等到我升大學我才知道這些存款還是不夠用</p>
+        </div>
+            </div>
+
+            <div class="colum side">
+                <h2>辭職原因</h2>
+                <p style="color:#c16fd1">當時我只想要短暫三個月,因為我沒有機車,要在沙鹿找工作很侷限且大衣的課很多根本沒有時間打工,所以當時我也沒有想去找打工這個念頭,就想說靠存款來生活就好了,直到後面發生的一堆事情以及轉折便開始了漫長的打工仔人生,轉折在下一份工作會詳細說明</p>
+
+            </div>
+        </section>
+
+
+         <section class="row">
+            <div class ="colum side">
+                <h3>開始打工加理財的人生</h3>
+                <p>已經19歲且大二下</p>
+                <img src = "static/5.jpg" width ="300" height="350">
+            </div>
+                  
+            <div class ="colum middle">
+                <h3>彩券行打工內容</h3>
+                <p style="color:#f2a30f">下面是我與寶寶一起健身的影片</p>
+                
+            </div>
+
+            <div class="colum side">
+                <h2>辭職原因</h2>
+                <p style="color:#c16fd1">做了一年半之久,做到後面很累,所有的打掃工作都是我在做且當時我基本上一哥月只有休一天整天放假,二到五都要上課有時候還得回神岡上班,假日也是要上班,起初覺得還可以再撐個一年,但是想到節日都不能休息過年也是一樣,我已經整整一年都們有陪家人過節日連過年都沒有,且努力到後面早晚班員工會跟老闆娘打小報告,說我根本沒有做的事情或行為,且之前那些老顧客也都慢慢不見了,我的客源已經消失了,所以我後面決定我要改做7-11班只有三四天且節日工讀生基本上都是休息,上班的話薪水雙倍,原本以為改換做7-11會讓自己輕鬆一些,想不到讓自己更累了.......心累(往下滑解開後續)</p>
+            </div>
+        </section>
+
+          <section class="row">
+            <div class ="colum side">
+                <h3>7-11店員照片</h3>
+                
+            </div>
+                
+            <div class ="colum middle">
+                <h3>7-11打工內容和心得</h3>
+                <p style="color:#f2a30f">打工內容:
+                打工心得:
+                </p>
+                
+            </div>
+
+            <div class="colum side">
+                <h2>為何要改做7-11</h2>
+                <p style="color:#c16fd1">離學校近且平日也能上班,即使沒比彩券行多但至少足以負擔我每個月的收入,也想說老闆會給我三四天班(時數至少6小時),面試時她說工讀節日休息有上班薪水雙倍,排班至少三四天且時數都6小時,結果我進去做才發現又是一個陷阱,我的班都只有四五小時,三四天的班,這樣我一個月根本連一萬都不到,我該怎麼去繳房租車貸甚至我的生活費怎麼辦,所以到後面又找了一份兼職(蛋捲工廠,往下滑繼續看)</p>
+            </div>
+        </section>
+
+          <section class="row">
+            <div class ="colum side">
+                <h3>放圖片加連結</h3>
+                 <a href="https://www.trueroll.com.tw/">實心蛋捲食品有限公司</a>
+            </div>
+                
+            <div class ="colum middle">
+                <h3>打工內容和心得</h3>
+                <p style="color:#f2a30f">打工內容:每天上班就開始挑蛋捲,好的留下,不好的丟掉,要時常捕貨例如:盒子.蓋子等等,每個禮拜五都要打掃,因為是周休二日要把環境用乾淨,用好就能提早下班了,還有附便當呢!</p>
+                <p style="color:#f2a30f">打工心得:在做的時候我們可以留一兩根起來留著自己吃,就是邊工作之外還可以邊吃免費的蛋捲,畢竟這家工廠可是伴手禮前十名,一隻蛋捲就賣25,四隻就100了,且這邊的同事還不錯可以有話聊也不用擔心他們去打小報告之類的,上大夜時薪220還做7.5小時半小時吃飯不算,這樣子再加上7-11我能支付固定支出也能存錢,我是想要長期做這份工作,但是礙於要上課時間沒有辦法且它是應徵短期而已並非長期,所以感覺到很可惜,但在還在做這份工作的時候要努里賺錢加存錢</p>
+                
+            </div>
+
+            <div class="colum side">
+                <h2>兼職原因</h2>
+                <p style="color:#c16fd1">發現老闆不是很喜歡我這員工,班雖有三四天但是都只四五小時,根本一個月賺下來沒有多少無法支出車貸跟房租,所以到後面決定找暑假兼職,至紹我在暑假多賺點錢存一些錢,等開學可以織出車貸和房租不讓父母擔心,且7-11做的慢慢存起來到後面也能織出這兩個固定項目還有生活費可以用</p>
+
+            </div>
+        </section>
+    </article>
+    </main>
+    <footer>
+        <a href="https://www.instagram.com/tq.__1314/"><i class="fa-brands fa-instagram-square"></i>Ig</a>
+        <a href="https://www.youtube.com/embed/ehSG1cPCd6M"><i class="fas fa-play-circle"></i>澎湖放鬆之旅</a>
+        <h5>Copyright ©  楊荃喜 All Rights Reserved.</h5>
+    </footer>
+</body>
